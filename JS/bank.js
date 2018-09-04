@@ -41,7 +41,17 @@
                   }
                 }
             function widgetBarFunction(){
-                document.getElementById("myWidget").classList.toggle('widget-container')
+                var widget=document.getElementById("myWidget").classList.toggle('widget-container')
+                if(widget==false){
+                console.log(document.getElementById("widgetDropdown").style.width="66%");
+                }
+                else{
+                  console.log(document.getElementById("widgetDropdown").style.width="90%");
+                }
+            }
+           
+               
+            
                 
                     // if (!event.target.matches('.widget-container')) {
         
@@ -51,7 +61,7 @@
                     //   var openDropdown = dropdowns[i];
                     //   if (openDropdown.classList.contains('widgets-container')) {
                         // openDropdown.classList.remove('widgets-container');
-                      }
+                      
                     
                   
                 
