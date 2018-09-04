@@ -1,21 +1,22 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/bankcss.css">
+        <script src="./JS/bank.js"></script>
     </head>
     <body>
         <div class="container clearfix">
-            <header class="header clearfix">
+            <header class="header">
                  <div class="logo">
                             <img src="./assets/mw-fmbch-logo.png" class="logo-img">
                 </div>
-                <ul class="header-navigation clearfix">
-                    <li class="header-nav-lables">DASHBOARD</li>
-                    <li class="header-nav-lables">ACCOUNTS</li>
-                    <li class="header-nav-lables">PAYMENTS &TRANSFERS</li>
-                    <li class="header-nav-lables">GENERAL SERVICES</li>
-                    <li class="header-nav-lables">FAVOURITES</li>
+                <ul class="header-navigation" id="navBar">
+                    <li  onclick="navFunction()" class="header-nav-lables">DASHBOARD</li>
+                    <li  onclick="navFunction()"class="header-nav-lables active">ACCOUNTS</li>
+                    <li  onclick="navFunction()"class="header-nav-lables">PAYMENTS &TRANSFERS</li>
+                    <li  onclick="navFunction()"class="header-nav-lables">GENERAL SERVICES</li>
+                    <li  onclick="navFunction()"class="header-nav-lables">FAVOURITES</li>
                 </ul>
-                <div class="candidate-profile clearfix">
+                <div class="candidate-profile">
                         <div class="candidate-container">
                             <div class="icon"><img src="./assets/emotarDarkSunglasses.png" alt="" class="image"></div>
                             <div class="wel-come">
@@ -40,122 +41,149 @@
                 <div class="main-img">
                        <!-- <img src="./assets/Screenshot (3).png" class="background-image" > -->
                        <div class="buttons clearfix"> 
-                           <span class="my-profile">My Profile</span>
-                           <span class="contact">Contact Us</span>
+                           <div class="my-profile">
+                               <button onclick="profileFunction()" class="dropbtn">My profile</button>
+                               <div id="profileDropdown" class="dropdown-content">
+                                    <a href="#Name:Lasedi Britte">Name:lasedi Britte</a>
+                               </div>        
+                            </div>
+                           <div class="contact">
+                               <button onclick="contactFunction()" class="dropbtn">Contact Us</button>
+                               <div id="contactDropdown" class="dropdown-content">
+                                   <a href="#Emai-Lasedi@gmail.com">Emai-Lasedi@gmail.com</a>
+                                   <a href="#Phone-no:xxxxxxx78">Phone-no:xxxxxxx78</a>
+                               </div>
+                           </div>   
+                           <div class="A">    
                            <img src="./assets/rectangle-19.png" class="a">
+                           </div>
                        </div>
                     
                 </div>
            </div>
+
             <div class="body-section clearfix">
                    <div class="dashboard-bar" >
                        <div class="dash">DASHBOARD:</div>
-                        <div class="dashline">dashboard/widget library</div>   
+                       <div class="dashline">dashboard/widget library</div>   
                    </div>
         
                 <div class="sub-section clearfix">
+                  <div class="widget-filter-bar">
+                        <div class="filter-dropdown">
+                                <div class="widget-bar">
+                                    <img onclick="widgetBarFunction() "src="assets/filter.png" class="i">
+                                    <div class="widget-filter">Widget Filter</div>
+                                </div>
+                               <div  class="widgets-container" id="myWidget">
+                                 <div class="activity-widgets">
+                                        <div class="checkbox-type">Activity based widgets</div>
+                                        <div class="checkbox"><input type="checkbox" name="" id="" class="check-box-style">
+                                              balance and transaction info
+                                        </div>
+                                        
+                                        <div class="checkbox"><input type="checkbox"  checked="checked" class="check-box-style">
+                                              General services
+                                        </div>
+                                        <div class="checkbox">
+                                        <input type="checkbox" name="" id="" class="check-box-style">
+                                              Liquidity managenent
+                                        </div>
+                                        <div class="checkbox"><input type="checkbox" checked="checked" class="check-box-style">
+                                              Supply chain servis
+                                        </div>
+                                        <div class="checkbox">
+                                        <input type="checkbox" name="" id="" class="check-box-style">
+                                              Trade services
+                                        </div>
+                                 </div>
+                               <div class="functionality-widgets">
+                               
+                                   <div class="checkbox-type">Functionality widgets</div>
+                                   <div class="checkbox">
+                                   <input type="checkbox" name="" id="" class="check-box-style">
+                                              Enquirey
+                                   </div>
+                                   <div class="checkbox">
+                                   <input type="checkbox" checked="checked" class="check-box-style">
+                                              Mislanious
+                                   </div>
+                                   <div class="checkbox">
+                                   <input type="checkbox" name="" class="check-box-style">
+                                              Request
+                                   </div>
+                                   
+                               </div>
+                               <div class="widget-status">
+                                   <div class="checkbox-type">Widget status</div>
+                                   <div class="checkbox">
+                                   <input type="checkbox" checked="checked" class="check-box-style">
+                                              Active
+                                   </div>
+                                   <div class="checkbox">
+                                   <input type="checkbox" name="" class="check-box-style">
+                                              Inactive
+                                   </div>
+                                   <div class="search-bar">
+                                       <div>search</div>
+                                   </div>
+                               </div> 
+                            </div> 
+                          </div>
+                  </div>
                   <div class="sub-section-one clearfix">
                         <div class="back-button"><img src="./assets/UI_9-512.png" alt="" class="back-symb"></div>
                         <div class="widget-section clearfix">
-                                <div class="widget-library">
+                            <div class="widget-library">
                                         
                                             <div class="library">
                                                 <div class="checkbox-type"> Widget Library</div>
                                                 <div class="checkbox">Select the widgets you want to watch</div>
                                             </div>
-                                </div>
-                            <div class="widget-content">
+                            </div>
+                         <div id="tick">
+                            <div onclick="tickMark()" class="widget-content">
+                                <img src="./assets/Accept.svg.png" class="click">
                                 <img src="./assets/rectangle-6.png" class="widget-img1">
                                 <div class="widget-font-type">Fixed Deposit</div>
                                 <div class="widget-Summary">Summary of Fixed deposits that you have invested</div>
                             </div>
-                            <div class="widget-content">
+                            <div onclick="tickMark()" class="widget-content">
+                                <img  src="./assets/Accept.svg.png" class="click">
                                 <img src="assets/rectangle-7.svg" class="widget-img2">
                                 <div class="widget-font-type">Loans</div>
                                 <div class="widget-summary">A Summary of loans and related inforamtion</div>
                             </div>
-                            <div class="widget-content">
+                            <div onclick="tickMark()"class="widget-content">
+                                <img src="./assets/Accept.svg.png" class="click">
                                 <img src="assets/rectangle-8.png" class="widget-img1">
                                 <div class="widget-font-type">Future Payments</div>
                                 <div class="widget-Summary">List of upcoming events scheduled in your calender</div>
                             </div>
-                            <div class="widget-content">
+                            <div onclick="tickMark()" class="widget-content">
+                                <img src="./assets/Accept.svg.png" class="click">
                                 <img src="./assets/mail image.png" class="widget-img1">
                                 <div class="widget-font-type">Mail alerts</div>
                                 <div class="widget-Summary">Broadcast msg alerts and Unread messages etc</div>
                             </div>
-                            <div class="widget-content">
+                            <div onclick="tickMark()" class="widget-content ">
+                                <img src="./assets/Accept.svg.png" class="click">
                                 <img src="./assets/rectangle-12.png" class="widget-img1">
                                 <div class="widget-font-type">Password allerts</div>
                                 <div class="widget-summary">Allerts related to login and transactions</div>
                             </div> 
-                            <div class="widget-content">
+                            <div onclick="tickMark()" class="widget-content clickbtn">
+                                    <img src="./assets/Accept.svg.png" class="click">
                                     <img src='./assets/rectangle-13.png' class="widget-img1">
                                     <div class="widget-font-type">Transaction Shortcuts</div>
                                     <div class="widget-summary">Quick links related to accounts and payments</div>
-                            </div>    
+                            </div>
+                         </div>       
                         </div>
             
                    </div>     
     
-                   <div class="sub-section-two">
-                     <div class="widget-bar">
-                         <img src="assets/filter.png" class="i">
-                         <div class="widget-filter">Widget Filter</div>
-                     </div>
-                     <div class="activity-widgets">
-                             <div class="checkbox-type">Activity based widgets</div>
-                             <div class="checkbox"><input type="checkbox" name="" id="" class="check-box-style">
-                                   balance and transaction info
-                             </div>
-                             
-                             <div class="checkbox"><input type="checkbox"  checked="checked" class="check-box-style">
-                                   General services
-                             </div>
-                             <div class="checkbox">
-                             <input type="checkbox" name="" id="" class="check-box-style">
-                                   Liquidity managenent
-                             </div>
-                             <div class="checkbox"><input type="checkbox" checked="checked" class="check-box-style">
-                                   Supply chain servis
-                             </div>
-                             <div class="checkbox">
-                             <input type="checkbox" name="" id="" class="check-box-style">
-                                   Trade services
-                             </div>
-                     </div>
-                    <div class="functionality-widgets">
-                    
-                        <div class="checkbox-type">Functionality widgets</div>
-                        <div class="checkbox">
-                        <input type="checkbox" name="" id="" class="check-box-style">
-                                   Enquirey
-                        </div>
-                        <div class="checkbox">
-                        <input type="checkbox" checked="checked" class="check-box-style">
-                                   Mislanious
-                        </div>
-                        <div class="checkbox">
-                        <input type="checkbox" name="" class="check-box-style">
-                                   Request
-                        </div>
-                        
-                    </div>
-                    <div class="widget-status">
-                        <div class="checkbox-type">Widget status</div>
-                        <div class="checkbox">
-                        <input type="checkbox" checked="checked" class="check-box-style">
-                                   Active
-                        </div>
-                        <div class="checkbox">
-                        <input type="checkbox" name="" class="check-box-style">
-                                   Inactive
-                        </div>
-                        <div class="search-bar">
-                            <div>search</div>
-                        </div>
-                    </div>    
-                  </div>
+              
             </div>
             <div class="page-number-bar clearfix">
                 <div class="p">
@@ -174,11 +202,6 @@
             </div>
 
             </div>
-        
-
-           
-            
-
           
             <footer class="footer">
                 <div class="site-map">Site map | Privacy Policy | Terms & Conditions | disclaimer</div>
@@ -187,5 +210,7 @@
         
         
     </div>
+    
     </body>
 </html>
+   

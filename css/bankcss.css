@@ -55,43 +55,80 @@ body{
   border-right: 0.5px solid #4a4a4a;
   padding: 2px;
 }
+.dropbtn {
+  background-color: #ffffff;
+  color:#4a4a4a;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+  background-color:#81cc48;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  border: 0.5px solid #4a4a4a;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 .a{
-  min-width: 20px;
-  height: 16px;
+  min-width: 16px;
   object-fit: contain;
-  padding: 3px;
+  padding: 2px 0 0 4px;
+}
+.A{
+  width:15%;
+  background-color: #ffffff;
+  float: left;
+  margin-top: 0.5px;
 }
 .logo-img{
-  width: 65%;
-  height: 80%;
+  width: 78%;
+  height: 100%;
   object-fit:cover;
-  padding: 0px;
   
 }
 .logo{
   width: 20%;
-  padding:0px;
-  margin-top: 10px;
+  align-items:center;
+  margin-left: 30px;
 }
 .header-navigation{
-  width: 60%;
+  width:60%;
   display: flex;
+  justify-content: center;
 }
 .candidate-profile{
-  min-width:20%;
-  box-sizing: border-box;
-  padding-left: 20px;
-  margin-top: 6px;
+  width:20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .header-nav-lables{
     /*height: 100%;*/
     font-family: sans-serif;
     font-size: 7px;
     text-align: center;
-    margin: 20px 30px;
-    box-sizing: border-box;
+    cursor: pointer;
+    margin: 20px 25px;
     
 }
+.active, .header-nav-lables:hover{color: #65b32e}
 .welcome{
   width:50%;
   font-size: 8px;
@@ -105,10 +142,7 @@ body{
   display:inline-block;
 }
 .candidate-container{
-  width:60%;
-  display: inline-block;
   box-sizing: border-box;
-  padding-top: 10px;
 }
 .icon{
   width:26%;
@@ -123,10 +157,8 @@ body{
   height: 20px;
   object-fit: contain;
 }
-.log-out-container{
-  width:40%;
-  float: right;
-}
+/*.log-out-container{
+}*/
 .log-out{
   font-style: normal;
   text-align: center;
@@ -134,8 +166,8 @@ body{
   font-size: 7px;
   border-radius: 3px;
   border: solid 1.2px #4a4a4a;
-  margin: 14px 15px 0px 0px;
-  padding: 2px;
+  margin: 0px 12px 0px 0px;
+  padding: 4px;
   color: #383838;
 
   
@@ -161,7 +193,6 @@ header ul{
   }
  .body-section{
     width: 95%;
-    box-align:center;
     background-color: white;
     margin: 0 auto 60px;
   }
@@ -180,10 +211,19 @@ header ul{
     height: 40px;
     padding-left: 20px;
   }*/
+  
+  .sub-section{
+    width:100%;
+
+  }
  .sub-section-one{
-    width:74%;
+    /*width:74%;*/
     box-sizing: border-box;
     float: left;
+    
+  }
+  .widget-container{
+    display: none;
     
   }
   
@@ -202,17 +242,23 @@ header ul{
 
   }
   .click{
-    width:6px;
-    height: 6px;
-    object-fit: contain;
-  }
-  .click:hover{
+    height: 20px;
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
+    transform: translate(50%,-50%);
+    object-fit: contain;
   }
+
+  .active > .click {
+    display: flex;
+  }
+
   .widget-content:hover{
-    border: solid 1px #4a4a4a;
+    border: 1px solid #81cc48;
+    background-color: #fdfdfd;
+    cursor: pointer;
 
   }
   .tick-mark{
@@ -275,11 +321,16 @@ header ul{
     object-fit: contain;
     margin: 0% 0% 0% 28%; 
   }
-  .sub-section-two{
+  .widget-filter-bar{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .filter-dropdown{
    width:20%;
-   float: right;
+   /* float: right; */
    box-sizing: border-box;
-   margin: 29px;
+   margin: 16px;
    border-radius: 3px;
    background-color: #ffffff;
    border: solid 1px #d9e0e6;
@@ -299,11 +350,12 @@ header ul{
 
   }
   .i{
-    width:15px;
+    width:20px;
     object-fit: contain;
     float: right;
-    padding-right: 5%;
-    padding-top: 3%;
+    padding-right: 8px;
+    padding-top: 8px;
+    cursor: pointer;
 
   }
   .line1{
@@ -523,7 +575,8 @@ footer{
   clear: both;
   display: table;
 }
-@media only screen and(max-width:767px){
+
+@media only screen and(max-width:1080px){
   .container{
     width:100%;
   }
@@ -531,7 +584,7 @@ footer{
     width:100%;
     font-size: 4px;
   }
-  .candidate-profile{
-    width:100%;
   }
-}
+  
+  
+
