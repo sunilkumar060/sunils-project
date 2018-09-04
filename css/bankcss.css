@@ -147,7 +147,13 @@ body{
 .icon{
   width:26%;
   display: inline-block;
+  cursor: pointer;
 }
+.image:hover{
+  width: 30px;
+  height: 30px; 
+}
+
 .wel-come{
   width:69%;
   display:inline-block;
@@ -214,10 +220,11 @@ header ul{
   
   .sub-section{
     width:100%;
+    position: relative;
 
   }
  .sub-section-one{
-    /*width:74%;*/
+    width:74%;
     box-sizing: border-box;
     float: left;
     
@@ -225,6 +232,10 @@ header ul{
   .widget-container{
     display: none;
     
+  }
+  .widget-article{
+    width:90%;
+    float: left;
   }
   
   .widget-content{
@@ -251,7 +262,7 @@ header ul{
     object-fit: contain;
   }
 
-  .active > .click {
+  .active >.click {
     display: flex;
   }
 
@@ -323,14 +334,15 @@ header ul{
   }
   .widget-filter-bar{
     width:100%;
-    display: flex;
-    justify-content: flex-end;
+    
   }
   .filter-dropdown{
    width:20%;
-   /* float: right; */
+   position: absolute;
+   top: 0;
+   right: 0;
    box-sizing: border-box;
-   margin: 16px;
+   margin: 2px 16px;
    border-radius: 3px;
    background-color: #ffffff;
    border: solid 1px #d9e0e6;
@@ -432,12 +444,12 @@ header ul{
   width:10%;
   box-sizing: border-box;
   padding: 10px;
-  display: inline-block;
+  float: left;
 }
 .widget-section{
-  width:90%;
+  width:40%;
   box-sizing: border-box;
-  float: right;
+  float: left;
 }
 
 .bottom-bar{

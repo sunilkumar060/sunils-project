@@ -69,8 +69,55 @@
                    </div>
         
                 <div class="sub-section clearfix">
-                  <div class="widget-filter-bar">
-                        <div class="filter-dropdown">
+                        <div class="back-button"><img src="./assets/UI_9-512.png" alt="" class="back-symb"></div>
+                        <div class="widget-section clearfix">
+                            <div class="widget-library">
+                                        
+                                            <div class="library">
+                                                <div class="checkbox-type"> Widget Library</div>
+                                                <div class="checkbox">Select the widgets you want to watch</div>
+                                            </div>
+                            </div>
+                        </div>
+                         <div  id="widgetDropdown" class="widget-article clearfix">
+                            <div onclick="tickMark()" class="widget-content">
+                                <img src="./assets/Accept.svg.png" class="click">
+                                <img src="./assets/rectangle-6.png" class="widget-img1">
+                                <div class="widget-font-type">Fixed Deposit</div>
+                                <div class="widget-Summary">Summary of Fixed deposits that you have invested</div>
+                            </div>
+                            <div onclick="tickMark()" class="widget-content">
+                                <img  src="./assets/Accept.svg.png" class="click">
+                                <img src="assets/rectangle-7.svg" class="widget-img2">
+                                <div class="widget-font-type">Loans</div>
+                                <div class="widget-summary">A Summary of loans and related inforamtion</div>
+                            </div>
+                            <div onclick="tickMark()"class="widget-content">
+                                <img src="./assets/Accept.svg.png" class="click">
+                                <img src="assets/rectangle-8.png" class="widget-img1">
+                                <div class="widget-font-type">Future Payments</div>
+                                <div class="widget-Summary">List of upcoming events scheduled in your calender</div>
+                            </div>
+                            <div onclick="tickMark()" class="widget-content">
+                                <img src="./assets/Accept.svg.png" class="click">
+                                <img src="./assets/mail image.png" class="widget-img1">
+                                <div class="widget-font-type">Mail alerts</div>
+                                <div class="widget-Summary">Broadcast msg alerts and Unread messages etc</div>
+                            </div>
+                            <div onclick="tickMark()" class="widget-content ">
+                                <img src="./assets/Accept.svg.png" class="click">
+                                <img src="./assets/rectangle-12.png" class="widget-img1">
+                                <div class="widget-font-type">Password allerts</div>
+                                <div class="widget-summary">Allerts related to login and transactions</div>
+                            </div> 
+                            <div onclick="tickMark()" class="widget-content clickbtn">
+                                    <img src="./assets/Accept.svg.png" class="click">
+                                    <img src='./assets/rectangle-13.png' class="widget-img1">
+                                    <div class="widget-font-type">Transaction Shortcuts</div>
+                                    <div class="widget-summary">Quick links related to accounts and payments</div>
+                            </div>
+                         </div>    
+                         <div class="filter-dropdown">
                                 <div class="widget-bar">
                                     <img onclick="widgetBarFunction() "src="assets/filter.png" class="i">
                                     <div class="widget-filter">Widget Filter</div>
@@ -130,76 +177,27 @@
                                </div> 
                             </div> 
                           </div>
-                  </div>
-                  <div class="sub-section-one clearfix">
-                        <div class="back-button"><img src="./assets/UI_9-512.png" alt="" class="back-symb"></div>
-                        <div class="widget-section clearfix">
-                            <div class="widget-library">
-                                        
-                                            <div class="library">
-                                                <div class="checkbox-type"> Widget Library</div>
-                                                <div class="checkbox">Select the widgets you want to watch</div>
-                                            </div>
-                            </div>
-                         <div id="tick">
-                            <div onclick="tickMark()" class="widget-content">
-                                <img src="./assets/Accept.svg.png" class="click">
-                                <img src="./assets/rectangle-6.png" class="widget-img1">
-                                <div class="widget-font-type">Fixed Deposit</div>
-                                <div class="widget-Summary">Summary of Fixed deposits that you have invested</div>
-                            </div>
-                            <div onclick="tickMark()" class="widget-content">
-                                <img  src="./assets/Accept.svg.png" class="click">
-                                <img src="assets/rectangle-7.svg" class="widget-img2">
-                                <div class="widget-font-type">Loans</div>
-                                <div class="widget-summary">A Summary of loans and related inforamtion</div>
-                            </div>
-                            <div onclick="tickMark()"class="widget-content">
-                                <img src="./assets/Accept.svg.png" class="click">
-                                <img src="assets/rectangle-8.png" class="widget-img1">
-                                <div class="widget-font-type">Future Payments</div>
-                                <div class="widget-Summary">List of upcoming events scheduled in your calender</div>
-                            </div>
-                            <div onclick="tickMark()" class="widget-content">
-                                <img src="./assets/Accept.svg.png" class="click">
-                                <img src="./assets/mail image.png" class="widget-img1">
-                                <div class="widget-font-type">Mail alerts</div>
-                                <div class="widget-Summary">Broadcast msg alerts and Unread messages etc</div>
-                            </div>
-                            <div onclick="tickMark()" class="widget-content ">
-                                <img src="./assets/Accept.svg.png" class="click">
-                                <img src="./assets/rectangle-12.png" class="widget-img1">
-                                <div class="widget-font-type">Password allerts</div>
-                                <div class="widget-summary">Allerts related to login and transactions</div>
-                            </div> 
-                            <div onclick="tickMark()" class="widget-content clickbtn">
-                                    <img src="./assets/Accept.svg.png" class="click">
-                                    <img src='./assets/rectangle-13.png' class="widget-img1">
-                                    <div class="widget-font-type">Transaction Shortcuts</div>
-                                    <div class="widget-summary">Quick links related to accounts and payments</div>
-                            </div>
-                         </div>       
                         </div>
+                          <div class="page-number-bar clearfix">
+                                <div class="p">
+                                    <div class="bk"> > </div>
+                                    <div class="pn">2 of 2 pages</div>
+                                </div> 
+                          </div>     
+                            
+                            <div class="bottom-button-bar clearfix">
+                                <div class="main-bar">
+                                    <button class="bar"> Back</button>
+                                    <button class="button">Add</button>
+                                    <button class="button">Remove</button>
+                                </div>
+                      
+                            </div>
+                      
+                  </div>    
+                  
+            </div>
             
-                   </div>     
-    
-              
-            </div>
-            <div class="page-number-bar clearfix">
-                <div class="p">
-                    <div class="bk"> < </div>
-                    <div class="pn">2 of 2 pages</div>
-                </div>   
-            </div>
-            
-            <div class="bottom-button-bar clearfix">
-                <div class="main-bar">
-                    <button class="bar"> Back</button>
-                    <button class="button">Add</button>
-                    <button class="button">Remove</button>
-                </div>
-      
-            </div>
 
             </div>
           
